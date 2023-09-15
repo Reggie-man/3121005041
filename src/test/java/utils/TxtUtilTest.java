@@ -3,11 +3,10 @@ package utils;
 import org.junit.Test;
 
 public class TxtUtilTest {
-
-    //正常结果路径
-    String resultFile = "C:\\Users\\sk\\Desktop\\软件工程\\src\\main\\resources\\com\\lw\\测试样例\\结果文件\\result.txt";
+    //结果路径
+    String resultFile = "C:\\Users\\sk\\Desktop\\个人项目\\src\\main\\resources\\com\\lw\\测试样例\\结果文件\\result.txt";
     //异常结果路径
-    String falseFile = "C:\\Users\\sk\\Desktop\\软件工程\\src\\main\\resources\\com\\lw\\测试样例\\结果文件\\son.txt";
+    String falseFile = "C:\\Users\\sk\\Desktop\\个人项目\\src\\main\\resources\\com\\lw\\测试样例\\结果文件\\son.txt";
     //空例子
     String mouse="";
 
@@ -25,8 +24,7 @@ public class TxtUtilTest {
      */
     @Test
     public void test2(){
-        //路径存在
-        TxtUtil.readFile("C:\\Users\\sk\\Desktop\\软件工程\\src\\main\\resources\\com\\lw\\测试样例\\我是错误的父目录\\orig.txt");
+        TxtUtil.readFile("C:\\Users\\sk\\Desktop\\个人项目\\src\\main\\resources\\com\\lw\\测试样例\\我是错误的父目录\\orig.txt");
     }
 
     /**
@@ -34,8 +32,7 @@ public class TxtUtilTest {
      */
     @Test
     public void test3(){
-        //路径为空
-        TxtUtil.readFile("C:\\Users\\sk\\Desktop\\软件工程\\src\\main\\resources\\com\\lw\\测试样例\\测试-源文件");
+        TxtUtil.readFile("C:\\Users\\sk\\Desktop\\个人项目\\src\\main\\resources\\com\\lw\\测试样例\\测试-源文件\\orig.txt");
     }
 
 
@@ -44,17 +41,16 @@ public class TxtUtilTest {
      */
     @Test
     public void test4(){
-        //路径为空
-        TxtUtil.readFile("C:\\Users\\sk\\Desktop\\软件工程\\src\\main\\resources\\com\\lw\\测试样例\\测试-源文件");
+        TxtUtil.readFile("C:\\Users\\sk\\Desktop\\个人项目\\src\\main\\resources\\com\\lw\\测试样例\\测试-源文件");
     }
 
     /**
-     * 测试
+     * 测试不存在路径
      */
     @Test
     public void test5(){
         //路径不存在
-        TxtUtil.readFile("./files/11312.txt");
+        TxtUtil.readFile("C:\\Users\\sk\\Desktop\\个人项目\\lll");
 
     }
 
@@ -71,7 +67,6 @@ public class TxtUtilTest {
      */
     @Test
     public void test7(){
-        // 路径不存在
         String text = "";
         TxtUtil.writeFile(resultFile, text);
     }
@@ -81,7 +76,6 @@ public class TxtUtilTest {
      */
     @Test
     public void test8(){
-        // 路径不存在
         String text = "我是一个例子";
         TxtUtil.writeFile(resultFile, text);
     }
@@ -91,7 +85,6 @@ public class TxtUtilTest {
      */
     @Test
     public void test9(){
-        // 路径不存在
         String text = "我又是一个例子";
         TxtUtil.writeFile(falseFile, text);
     }
